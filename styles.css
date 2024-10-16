@@ -105,6 +105,46 @@ header p {
     background-color: #E64A19;
 }
 
+/* Styling for the gallery container */
+.juice-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Default image styles */
+.juice-image {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  margin: 10px;
+  border-radius: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out;
+}
+
+/* Hover effect for better interaction */
+.juice-image:hover {
+  transform: scale(1.05);
+}
+
+/* Responsive images for small devices */
+@media (max-width: 768px) {
+  .juice-image {
+    max-width: 200px;
+  }
+}
+
+/* Responsive images for extra small devices */
+@media (max-width: 480px) {
+  .juice-image {
+    max-width: 150px;
+  }
+}
+
 /* Checkout Section */
 #checkout {
     background-color: #FFF;
