@@ -11,32 +11,54 @@ body {
     color: #333;
     line-height: 1.6;
 }
-
-/* Logo Styling */
+  
+ /* Logo Styling */
 #logo {
-    width: 150px;
-    display: block;
-    margin: 10px auto;
-}
+  width: 150px;
+  display: block;
+  margin: 10px auto;
+} 
 
-/* Header Section */
-header {
-    background: linear-gradient(45deg, #FF9800, #FF5722);
+/* Style for the header */
+.header {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     color: #fff;
     text-align: center;
-    padding: 20px 0;
-}
-
-header h1 {
+    overflow: hidden; /* Ensures the video doesn't overflow */
+  }
+  
+  /* Style for the header video */
+  .header-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the video covers the entire header */
+    z-index: -1; /* Puts the video behind the text */
+  }
+  
+  /* Style for the header content */
+  .header-content {
+    position: relative;
+    z-index: 1; /* Ensures the content stays above the video */
+    padding: 20px;
+  }
+  
+  /* Optional styling to enhance header content */
+  .header-content h1 {
     font-size: 3rem;
-    margin-bottom: 10px;
-    text-shadow: 2px 2px #D84315;
-}
-
-header p {
-    font-size: 1.2rem;
-    margin-bottom: 0;
-}
+    margin: 0;
+  }
+  
+  .header-content p {
+    font-size: 1.5rem;
+    margin-top: 10px;
+  }
 
 /* Juice Menu Section */
 #juice-menu {
@@ -110,40 +132,82 @@ header p {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    align-items: center;
+    align-items: flex-start;
     margin: 0 auto;
     padding: 20px;
-}
+    gap: 20px; /* Adds spacing between items */
+  }
   
-/* Default image styles */
-.juice-image {
+  /* Styling for each juice item container */
+  .juice-item {
+    flex: 1 1 calc(33.333% - 30px); /* Each item takes one-third of the container width */
+    display: flex;
+    flex-direction: column; /* Ensures the image and text stack vertically */
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  /* Default image styles */
+  .juice-image {
     width: 100%;
-    max-width: 300px;
+    max-width: 100%;
     height: auto;
-    margin: 10px;
-    border-radius: 15px;
+    border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s ease-in-out;
-}
+  }
   
-/* Hover effect for better interaction */
-.juice-image:hover {
+  /* Styling for juice information text */
+  .juice-info {
+    text-align: center;
+    padding: 10px;
+  }
+  
+  .juice-info h3 {
+    font-size: 1.5rem;
+    margin: 10px 0 5px 0;
+  }
+  
+  .juice-info p {
+    font-size: 1rem;
+    color: #666;
+  }
+  
+  /* Hover effect for better interaction */
+  .juice-image:hover {
     transform: scale(1.05);
-}
+  }
   
-/* Responsive images for small devices */
-@media (max-width: 768px) {
-    .juice-image {
-        max-width: 200px;
+  /* Media query for tablets and smaller devices */
+  @media (max-width: 768px) {
+    .juice-item {
+      flex: 1 1 calc(50% - 20px); /* Two items per row on medium screens */
     }
-}
   
-/* Responsive images for extra small devices */
-@media (max-width: 480px) {
-    .juice-image {
-        max-width: 150px;
+    .juice-info h3 {
+      font-size: 1.2rem;
     }
-}
+  
+    .juice-info p {
+      font-size: 0.9rem;
+    }
+  }
+  
+  /* Media query for smartphones and extra small devices */
+  @media (max-width: 480px) {
+    .juice-item {
+      flex: 1 1 100%; /* One item per row on small screens */
+    }
+  
+    .juice-info h3 {
+      font-size: 1.1rem;
+    }
+  
+    .juice-info p {
+      font-size: 0.85rem;
+    }
+  }
+  
 /* Checkout Section */
 #checkout {
     background-color: #FFF;
