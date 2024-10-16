@@ -1,0 +1,248 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #f0fff0;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Logo Styling */
+#logo {
+    width: 150px;
+    display: block;
+    margin: 10px auto;
+}
+
+/* Header Section */
+header {
+    background: linear-gradient(45deg, #FF9800, #FF5722);
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+header h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px #D84315;
+}
+
+header p {
+    font-size: 1.2rem;
+    margin-bottom: 0;
+}
+
+/* Juice Menu Section */
+#juice-menu {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 40px;
+    background-color: #fff;
+}
+
+#juice-menu h2 {
+    grid-column: span 3;
+    font-size: 2rem;
+    text-align: center;
+    color: #FF5722;
+    margin-bottom: 30px;
+}
+
+.juice-item {
+    background-color: #FFF3E0;
+    border: 1px solid #FFC107;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.juice-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: opacity 0.3s ease;
+}
+
+.juice-item:hover img {
+    opacity: 0.8;
+}
+
+.juice-item h3 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: #FF9800;
+}
+
+.juice-item p {
+    font-size: 1rem;
+    color: #757575;
+    margin-bottom: 15px;
+}
+
+.order-button {
+    background-color: #FF5722;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.order-button:hover {
+    background-color: #E64A19;
+}
+
+/* Checkout Section */
+#checkout {
+    background-color: #FFF;
+    padding: 40px;
+    text-align: center;
+    border-top: 5px solid #FF9800;
+}
+
+#checkout h2 {
+    font-size: 2rem;
+    color: #FF5722;
+    margin-bottom: 20px;
+}
+
+#checkout form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+
+#checkout label {
+    font-size: 1rem;
+    color: #757575;
+}
+
+#checkout input[type="text"],
+#checkout input[type="number"],
+#checkout input[type="tel"] {
+    padding: 10px;
+    width: 100%;
+    max-width: 400px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 1rem;
+}
+
+#checkout input[type="number"]:focus,
+#checkout input[type="tel"]:focus {
+    outline: none;
+    border-color: #FF9800;
+}
+
+#mpesaPayButton {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#mpesaPayButton:hover {
+    background-color: #388E3C;
+}
+
+/* Location Section */
+#delivery-location {
+    text-align: center;
+    margin: 40px 0;
+}
+
+#location-status {
+    font-size: 18px;
+    color: #4CAF50;
+    margin: 10px 0;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+#map {
+    width: 80%;
+    height: 400px;
+    margin: 20px auto;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+}
+
+/* Footer Section */
+footer {
+    background-color: #FF5722;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+footer h3, footer h4 {
+    margin-bottom: 10px;
+}
+
+footer ul {
+    list-style: none;
+}
+
+footer li {
+    margin-bottom: 5px;
+}
+
+/* General Button Styling */
+button {
+    padding: 10px 20px;
+    background-color: #FF5722;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #FF784E;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #juice-menu {
+        grid-template-columns: 1fr;
+    }
+
+    header h1 {
+        font-size: 2.5rem;
+    }
+
+    header p {
+        font-size: 1rem;
+    }
+}

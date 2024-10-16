@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FRESHDAILY</title>
+    <link rel="icon" type="image/jpg" href="logo.jpg">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" /> <!-- Leaflet CSS -->
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="https://www.paypal.com/sdk/js?client-id=YOUR_PAYPAL_CLIENT_ID"></script> <!-- PayPal SDK -->
+</head>
+<body>
+    <header>
+        <!-- Adding the Logo -->
+        <img src="logo.jpg" alt="FRESHDAILY Logo" id="logo">
+        <h1>FRESHDAILY</h1>
+        <p>Fresh Juice Delivered to Your Doorstep. Stay Healthy Feel Great!</p>
+    </header>
+
+    <section id="juice-menu">
+        <h2>Juice Varieties</h2>
+        <!-- Adding Juice Images -->
+        <div class="juice-item">
+            <img src="cocktail.jpg" alt="Cocktail Juice">
+            <h3>Cocktail</h3>
+            <p>Choose cold or warm.</p>
+            <button class="order-button" data-juice="Cocktail">Order Now</button>
+        </div>
+        <div class="juice-item">
+            <img src="pineapple.jpg" alt="Pineapple Juice">
+            <h3>Pineapple</h3>
+            <p>Choose cold or warm.</p>
+            <button class="order-button" data-juice="Pineapple">Order Now</button>
+        </div>
+        <div class="juice-item">
+            <img src="mango.jpg" alt="Mango Juice">
+            <h3>Mango</h3>
+            <p>Choose cold or warm.</p>
+            <button class="order-button" data-juice="Mango">Order Now</button>
+        </div>
+        <div class="juice-item">
+            <img src="apple.jpg" alt="Apple Juice">
+            <h3>Apple</h3>
+            <p>Choose cold or warm.</p>
+            <button class="order-button" data-juice="Apple">Order Now</button>
+        </div>
+        <div class="juice-item">
+            <img src="banana.jpg" alt="Banana Juice">
+            <h3>Banana</h3>
+            <p>Choose cold or warm.</p>
+            <button class="order-button" data-juice="Banana">Order Now</button>
+        </div>
+        <div class="juice-item">
+            <img src="orange.jpg" alt="Orange Juice">
+            <h3>Orange</h3>
+            <p>Choose cold or warm.</p>
+            <button class="order-button" data-juice="Orange">Order Now</button>
+        </div>
+        <div class="juice-item">
+            <img src="berries.jpg" alt="Mixed Berries Juice">
+            <h3>Mixed Berries</h3>
+            <p>Choose cold or warm.</p>
+            <button class="order-button" data-juice="Mixed Berries">Order Now</button>
+        </div>
+        <div class="juice-item">
+            <img src="watermelon.jpg" alt="Watermelon Juice">
+            <h3>Watermelon</h3>
+            <p>Choose cold or warm.</p>
+            <button class="order-button" data-juice="Watermelon">Order Now</button>
+        </div>
+    </section>
+
+    <!-- Location Detection Section -->
+    <section id="delivery-location">
+        <h2>Your Location for Delivery</h2>
+        <button id="get-location">Get My Location</button>
+        <p id="location-status">Location will appear here.</p>
+        <div id="map" style="height: 400px;"></div> <!-- Placeholder for future map implementation if needed -->
+    </section>
+
+    <section id="checkout">
+        <h2>Checkout</h2>
+        <form id="checkout-form">
+            <label for="juice-type">Juice Type</label>
+            <input type="text" id="juice-type" name="juice-type" readonly><br>
+
+            <label for="amount">Amount (KSHS)</label>
+            <input type="number" id="amount" name="amount" placeholder="Enter amount" required><br>
+
+            <label for="phone">Phone (for MPesa)</label>
+            <input type="tel" id="phone" name="phone" placeholder="Enter phone number" required><br>
+
+            <h3>Choose Payment Method</h3>
+            <button type="button" id="mpesaPayButton">Pay with MPesa</button>
+        </form>
+    </section>
+
+    <footer>
+        <h3>Contact Us</h3>
+        <p>WhatsApp: +254798941230</p>
+        <p>Email: support@freshdaily.com</p>
+        <p>Dial a Delivery: +254798941230</p>
+        <h4>Branch Locations</h4>
+        <ul>
+            <li>Nairobi - CBD</li>
+            <li>Mombasa - Nyali</li>
+            <li>Kisumu - City Center</li>
+        </ul>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
