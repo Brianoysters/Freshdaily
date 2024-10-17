@@ -62,7 +62,7 @@ margin: 10px auto;
 /* Juice Menu Section */
 #juice-menu {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 20px;
   padding: 40px;
   background-color: #fff;
@@ -83,124 +83,72 @@ margin: 10px auto;
   padding: 20px;
   text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  position: relative;
-  overflow: hidden;
 }
 
 .juice-item img {
   width: 100%;
-  height: 200px;
-  object-fit: cover;
+  height: auto;
+  max-width: 300px;  /* Restrict max width for images */
   border-radius: 10px;
   transition: opacity 0.3s ease;
 }
 
-.juice-item:hover img {
-  opacity: 0.8;
-}
-
 .juice-item h3 {
-  font-size: 1.8rem;
-  margin-bottom: 10px;
+  font-size: 1.6rem;
   color: #FF9800;
 }
 
 .juice-item p {
-  font-size: 1rem;
+  font-size: 0.9rem;
   color: #757575;
-  margin-bottom: 15px;
 }
 
 .order-button {
   background-color: #FF5722;
   color: white;
-  border: none;
   padding: 10px 20px;
   border-radius: 5px;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
 }
 
-.order-button:hover {
-  background-color: #E64A19;
-}
-
-/* Styling for the gallery container */
-.juice-gallery {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  align-items: flex-start;
-  margin: 0 auto;
-  padding: 20px;
-  gap: 20px; /* Adds spacing between items */
-}
-
-.juice-item {
-  flex: 1 1 calc(33.333% - 30px); /* Each item takes one-third of the container width */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-bottom: 20px;
-}
-
-.juice-image {
-  width: 100%;
-  max-width: 100%;
-  height: auto;
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: transform 0.2s ease-in-out;
-}
-
-.juice-info {
-  text-align: center;
-  padding: 10px;
-}
-
-.juice-info h3 {
-  font-size: 1.5rem;
-  margin: 10px 0 5px 0;
-}
-
-.juice-info p {
-  font-size: 1rem;
-  color: #666;
-}
-
-.juice-image:hover {
-  transform: scale(1.05);
-}
-
-/* Media query for tablets and smaller devices */
+/* Media queries for smaller devices */
 @media (max-width: 768px) {
   .juice-item {
       flex: 1 1 calc(50% - 20px); /* Two items per row on medium screens */
   }
 
-  .juice-info h3 {
-      font-size: 1.2rem;
+  .juice-item h3 {
+      font-size: 1.5rem;
   }
 
-  .juice-info p {
+  .juice-item p {
       font-size: 0.9rem;
   }
 }
 
-/* Media query for smartphones and extra small devices */
 @media (max-width: 480px) {
   .juice-item {
-      flex: 1 1 100%; /* One item per row on small screens */
+      padding: 15px;
   }
 
-  .juice-info h3 {
-      font-size: 1.1rem;
+  .juice-item h3 {
+      font-size: 1.4rem;
   }
 
-  .juice-info p {
+  .juice-item p {
       font-size: 0.85rem;
   }
+
+  #juice-menu h2 {
+      font-size: 1.6rem;
+  }
+}
+
+/* Footer Section */
+footer {
+  background-color: #FF5722;
+  color: white;
+  padding: 20px;
+  text-align: center;
 }
 
 /* Checkout Section */
