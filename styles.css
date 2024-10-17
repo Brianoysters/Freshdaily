@@ -14,10 +14,10 @@ body {
 
 /* Logo Styling */
 #logo {
-width: 150px;
-display: block;
-margin: 10px auto;
-} 
+  width: 150px;
+  display: block;
+  margin: 10px auto;
+}
 
 /* Style for the header */
 .header {
@@ -76,6 +76,7 @@ margin: 10px auto;
   margin-bottom: 30px;
 }
 
+/* Juice Item Container */
 .juice-item {
   background-color: #FFF3E0;
   border: 1px solid #FFC107;
@@ -88,13 +89,19 @@ margin: 10px auto;
 .juice-item img {
   width: 100%;
   height: auto;
-  max-width: 300px;  /* Restrict max width for images */
+  max-height: 200px;  /* Restrict max height for images */
+  object-fit: cover;
   border-radius: 10px;
   transition: opacity 0.3s ease;
 }
 
+.juice-item:hover img {
+  opacity: 0.9;
+}
+
 .juice-item h3 {
   font-size: 1.6rem;
+  margin-bottom: 10px;
   color: #FF9800;
 }
 
@@ -103,52 +110,20 @@ margin: 10px auto;
   color: #757575;
 }
 
+/* Order Button Styling */
 .order-button {
   background-color: #FF5722;
   color: white;
+  border: none;
   padding: 10px 20px;
   border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-/* Media queries for smaller devices */
-@media (max-width: 768px) {
-  .juice-item {
-      flex: 1 1 calc(50% - 20px); /* Two items per row on medium screens */
-  }
-
-  .juice-item h3 {
-      font-size: 1.5rem;
-  }
-
-  .juice-item p {
-      font-size: 0.9rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .juice-item {
-      padding: 15px;
-  }
-
-  .juice-item h3 {
-      font-size: 1.4rem;
-  }
-
-  .juice-item p {
-      font-size: 0.85rem;
-  }
-
-  #juice-menu h2 {
-      font-size: 1.6rem;
-  }
-}
-
-/* Footer Section */
-footer {
-  background-color: #FF5722;
-  color: white;
-  padding: 20px;
-  text-align: center;
+.order-button:hover {
+  background-color: #E64A19;
 }
 
 /* Checkout Section */
@@ -157,6 +132,7 @@ footer {
   padding: 40px;
   text-align: center;
   border-top: 5px solid #FF9800;
+  display: none; /* Initially hidden */
 }
 
 #checkout h2 {
@@ -165,16 +141,11 @@ footer {
   margin-bottom: 20px;
 }
 
-#checkout form {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  align-items: center;
-}
-
 #checkout label {
   font-size: 1rem;
   color: #757575;
+  margin-bottom: 5px;
+  display: block; /* Make labels block elements */
 }
 
 #checkout input[type="text"],
@@ -186,6 +157,14 @@ footer {
   border-radius: 5px;
   border: 1px solid #ddd;
   font-size: 1rem;
+  margin-bottom: 15px; /* Space below input fields */
+}
+
+#checkout input[type="text"]:focus,
+#checkout input[type="number"]:focus,
+#checkout input[type="tel"]:focus {
+  outline: none;
+  border-color: #FF9800;
 }
 
 #mpesaPayButton {
@@ -213,20 +192,6 @@ footer {
   font-size: 18px;
   color: #4CAF50;
   margin: 10px 0;
-}
-
-button {
-  background-color: #4CAF50;
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 16px;
-}
-
-button:hover {
-  background-color: #45a049;
 }
 
 #map {
@@ -257,33 +222,55 @@ footer li {
   margin-bottom: 5px;
 }
 
-.footer-text {
-  text-align: center;
-  font-size: 1.5rem;
-  color: #FFF;
-  padding: 20px;
-  background-color: #FF5722;
-  font-weight: bold;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-  perspective: 500px;
-}
-
-footer {
-  position: relative;
-  padding: 20px 0;
-}
-
 /* Responsive Design */
 @media (max-width: 768px) {
   #juice-menu {
       grid-template-columns: 1fr;
   }
 
-  header h1 {
-      font-size: 2.5rem;
+  #juice-menu h2 {
+      font-size: 1.8rem;
   }
 
-  header p {
-      font-size: 1rem;
+  .juice-item h3 {
+      font-size: 1.5rem;
+  }
+
+  .juice-item p {
+      font-size: 0.9rem;
+  }
+
+  #checkout h2 {
+      font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  #juice-menu {
+      grid-template-columns: 1fr;
+  }
+
+  .juice-item {
+      padding: 10px;
+  }
+
+  #checkout {
+      padding: 20px;
+  }
+
+  #checkout input[type="text"],
+  #checkout input[type="number"],
+  #checkout input[type="tel"] {
+      max-width: 90%; /* Adjust input field width for smaller screens */
+  }
+}
+
+@media (max-width: 375px) {
+  #juice-menu {
+      grid-template-columns: 1fr;
+  }
+
+  .juice-item img {
+      height: 150px; /* Adjust image height for smaller screens */
   }
 }

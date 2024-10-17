@@ -33,7 +33,26 @@
             <div class="juice-info">
                 <h3>Cocktail</h3>
                 <p>Choose cold or warm.</p>
-                <button class="order-button" data-juice="Cocktail">Order Now</button>
+                <form id="orderForm-cocktail">
+                    <label for="size">Choose Size:</label>
+                    <select id="size-cocktail" name="size">
+                        <option value="500ml">500 ml - 300 KSHS</option>
+                        <option value="1litre">1 Litre - 600 KSHS</option>
+                    </select>
+                    <br><br>
+                    <label for="temperature">Temperature:</label>
+                    <select id="temperature-cocktail" name="temperature">
+                        <option value="cold">Cold</option>
+                        <option value="normal">Normal</option>
+                    </select>
+                    <br><br>
+    
+                    <!-- Hidden fields to capture location -->
+                    <input type="hidden" id="latitude-cocktail" name="latitude">
+                    <input type="hidden" id="longitude-cocktail" name="longitude">
+
+                    <button class="order-button" type="button" onclick="submitOrder('cocktail')">Order Now</button>
+                </form>
             </div>
         </div>
         <div class="juice-item">
@@ -41,7 +60,26 @@
             <div class="juice-info">
                 <h3>Pineapple</h3>
                 <p>Choose cold or warm.</p>
-                <button class="order-button" data-juice="Pineapple">Order Now</button>
+                <form id="orderForm-pineapple">
+                    <label for="size">Choose Size:</label>
+                    <select id="size-pineapple" name="size">
+                        <option value="500ml">500 ml - 300 KSHS</option>
+                        <option value="1litre">1 Litre - 600 KSHS</option>
+                    </select>
+                    <br><br>
+                    <label for="temperature">Temperature:</label>
+                    <select id="temperature-pineapple" name="temperature">
+                        <option value="cold">Cold</option>
+                        <option value="normal">Normal</option>
+                    </select>
+                    <br><br>
+    
+                    <!-- Hidden fields to capture location -->
+                    <input type="hidden" id="latitude-pineapple" name="latitude">
+                    <input type="hidden" id="longitude-pineapple" name="longitude">
+    
+                    <button class="order-button" type="button" onclick="submitOrder('pineapple')">Order Now</button>
+                </form>
             </div>
         </div>
         <div class="juice-item">
@@ -49,7 +87,26 @@
             <div class="juice-info">
                 <h3>Mango</h3>
                 <p>Choose cold or warm.</p>
-                <button class="order-button" data-juice="Mango">Order Now</button>
+                <form id="orderForm-mango">
+                    <label for="size">Choose Size:</label>
+                    <select id="size-mango" name="size">
+                        <option value="500ml">500 ml - 300 KSHS</option>
+                        <option value="1litre">1 Litre - 600 KSHS</option>
+                    </select>
+                    <br><br>
+                    <label for="temperature">Temperature:</label>
+                    <select id="temperature-mango" name="temperature">
+                        <option value="cold">Cold</option>
+                        <option value="normal">Normal</option>
+                    </select>
+                    <br><br>
+    
+                    <!-- Hidden fields to capture location -->
+                    <input type="hidden" id="latitude-mango" name="latitude">
+                    <input type="hidden" id="longitude-mango" name="longitude">
+    
+                    <button class="order-button" type="button" onclick="submitOrder('mango')">Order Now</button>
+                </form>
             </div>
         </div>
         <div class="juice-item">
@@ -57,7 +114,26 @@
             <div class="juice-info">
                 <h3>Apple</h3>
                 <p>Choose cold or warm.</p>
-                <button class="order-button" data-juice="Apple">Order Now</button>
+                <form id="orderForm-apple">
+                    <label for="size">Choose Size:</label>
+                    <select id="size-apple" name="size">
+                        <option value="500ml">500 ml - 300 KSHS</option>
+                        <option value="1litre">1 Litre - 600 KSHS</option>
+                    </select>
+                    <br><br>
+                    <label for="temperature">Temperature:</label>
+                    <select id="temperature-apple" name="temperature">
+                        <option value="cold">Cold</option>
+                        <option value="normal">Normal</option>
+                    </select>
+                    <br><br>
+    
+                    <!-- Hidden fields to capture location -->
+                    <input type="hidden" id="latitude-apple" name="latitude">
+                    <input type="hidden" id="longitude-apple" name="longitude">
+    
+                    <button class="order-button" type="button" onclick="submitOrder('apple')">Order Now</button>
+                </form>
             </div>
         </div>
         <div class="juice-item">
@@ -65,7 +141,26 @@
             <div class="juice-info">
                 <h3>Banana</h3>
                 <p>Choose cold or warm.</p>
-                <button class="order-button" data-juice="Banana">Order Now</button>
+                <form id="orderForm-banana">
+                    <label for="size">Choose Size:</label>
+                    <select id="size-banana" name="size">
+                        <option value="500ml">500 ml - 300 KSHS</option>
+                        <option value="1litre">1 Litre - 600 KSHS</option>
+                    </select>
+                    <br><br>
+                    <label for="temperature">Temperature:</label>
+                    <select id="temperature-banana" name="temperature">
+                        <option value="cold">Cold</option>
+                        <option value="normal">Normal</option>
+                    </select>
+                    <br><br>
+    
+                    <!-- Hidden fields to capture location -->
+                    <input type="hidden" id="latitude-banana" name="latitude">
+                    <input type="hidden" id="longitude-banana" name="longitude">
+    
+                    <button class="order-button" type="button" onclick="submitOrder('banana')">Order Now</button>
+                </form>
             </div>
         </div>
         <div class="juice-item">
@@ -73,7 +168,26 @@
             <div class="juice-info">
                 <h3>Orange</h3>
                 <p>Choose cold or warm.</p>
-                <button class="order-button" data-juice="Orange">Order Now</button>
+                <form id="orderForm-orange">
+                    <label for="size">Choose Size:</label>
+                    <select id="size-orange" name="size">
+                        <option value="500ml">500 ml - 300 KSHS</option>
+                        <option value="1litre">1 Litre - 600 KSHS</option>
+                    </select>
+                    <br><br>
+                    <label for="temperature">Temperature:</label>
+                    <select id="temperature-orange" name="temperature">
+                        <option value="cold">Cold</option>
+                        <option value="normal">Normal</option>
+                    </select>
+                    <br><br>
+    
+                    <!-- Hidden fields to capture location -->
+                    <input type="hidden" id="latitude-orange" name="latitude">
+                    <input type="hidden" id="longitude-orange" name="longitude">
+    
+                    <button class="order-button" type="button" onclick="submitOrder('orange')">Order Now</button>
+                </form>
             </div>
         </div>
         <div class="juice-item">
@@ -81,7 +195,26 @@
             <div class="juice-info">
                 <h3>Mixed Berries</h3>
                 <p>Choose cold or warm.</p>
-                <button class="order-button" data-juice="Mixed Berries">Order Now</button>
+                <form id="orderForm-mixed berries">
+                    <label for="size">Choose Size:</label>
+                    <select id="size-mixed berries" name="size">
+                        <option value="500ml">500 ml - 300 KSHS</option>
+                        <option value="1litre">1 Litre - 600 KSHS</option>
+                    </select>
+                    <br><br>
+                    <label for="temperature">Temperature:</label>
+                    <select id="temperature-mixed berries" name="temperature">
+                        <option value="cold">Cold</option>
+                        <option value="normal">Normal</option>
+                    </select>
+                    <br><br>
+    
+                    <!-- Hidden fields to capture location -->
+                    <input type="hidden" id="latitude-mixed berries" name="latitude">
+                    <input type="hidden" id="longitude-mixed berries" name="longitude">
+    
+                    <button class="order-button" type="button" onclick="submitOrder('mixed berries')">Order Now</button>
+                </form>
             </div>
         </div>
         <div class="juice-item">
@@ -89,9 +222,57 @@
             <div class="juice-info">
                 <h3>Watermelon</h3>
                 <p>Choose cold or warm.</p>
-                <button class="order-button" data-juice="Watermelon">Order Now</button>
+                <form id="orderForm-watermelon">
+                    <label for="size">Choose Size:</label>
+                    <select id="size-watermelon" name="size">
+                        <option value="500ml">500 ml - 300 KSHS</option>
+                        <option value="1litre">1 Litre - 600 KSHS</option>
+                    </select>
+                    <br><br>
+                    <label for="temperature">Temperature:</label>
+                    <select id="temperature-watermelon" name="temperature">
+                        <option value="cold">Cold</option>
+                        <option value="normal">Normal</option>
+                    </select>
+                    <br><br>
+    
+                    <!-- Hidden fields to capture location -->
+                    <input type="hidden" id="latitude-watermelon" name="latitude">
+                    <input type="hidden" id="longitude-watermelon" name="longitude">
+    
+                    <button class="order-button" type="button" onclick="submitOrder('watermelon')">Order Now</button>
+                </form>
             </div>
         </div>
+    </section>
+
+    <!--checkout-->
+    <section id="checkout" style="display:none;">
+        <h2>Checkout</h2>
+        <form id="checkout-form">
+            <label for="juice-type">Juice Type</label>
+            <input type="text" id="juice-type" name="juice-type" readonly><br>
+    
+            <label for="size">Size</label>
+            <input type="text" id="size" name="size" readonly><br>
+    
+            <label for="temperature">Temperature</label>
+            <input type="text" id="temperature" name="temperature" readonly><br>
+    
+            <label for="latitude">Latitude</label>
+            <input type="text" id="latitude" name="latitude" readonly><br>
+    
+            <label for="longitude">Longitude</label>
+            <input type="text" id="longitude" name="longitude" readonly><br>
+    
+            <label for="amount">Amount (KSHS)</label>
+            <input type="number" id="amount" name="amount" placeholder="Enter amount" required><br>
+    
+            <label for="phone">Phone (for MPesa)</label>
+            <input type="tel" id="phone" name="phone" placeholder="Enter phone number" required><br>
+    
+            <button type="button" id="mpesaPayButton">Pay with MPesa</button>
+        </form>
     </section>
 
     <!-- Location Detection Section -->
@@ -100,23 +281,6 @@
         <button id="get-location">Get My Location</button>
         <p id="location-status">Location will appear here.</p>
         <div id="map" style="height: 400px;"></div> <!-- Placeholder for future map implementation if needed -->
-    </section>
-
-    <section id="checkout">
-        <h2>Checkout</h2>
-        <form id="checkout-form">
-            <label for="juice-type">Juice Type</label>
-            <input type="text" id="juice-type" name="juice-type" readonly><br>
-
-            <label for="amount">Amount (KSHS)</label>
-            <input type="number" id="amount" name="amount" placeholder="Enter amount" required><br>
-
-            <label for="phone">Phone (for MPesa)</label>
-            <input type="tel" id="phone" name="phone" placeholder="Enter phone number" required><br>
-
-            <h3>Choose Payment Method</h3>
-            <button type="button" id="mpesaPayButton">Pay with MPesa</button>
-        </form>
     </section>
 
     <footer>

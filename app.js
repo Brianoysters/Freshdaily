@@ -1,13 +1,65 @@
-// Handle juice order selection
-const orderButtons = document.querySelectorAll('.order-button');
-orderButtons.forEach(button => {
-    button.addEventListener('click', (e) => {
-        const juiceType = e.target.getAttribute('data-juice');
-        document.getElementById('juice-type').value = juiceType;
-        alert(`${juiceType} selected! Proceed to checkout.`);
-    });
-});
+document.addEventListener('DOMContentLoaded', function() {
+    // Capture user's location and set to hidden fields in the forms
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(function (position) {
+            // Set location details in hidden fields for each juice
+            document.getElementById('latitude-cocktail').value = position.coords.latitude;
+            document.getElementById('longitude-cocktail').value = position.coords.longitude;
 
+            document.getElementById('latitude-apple').value = position.coords.latitude;
+            document.getElementById('longitude-apple').value = position.coords.longitude;
+
+            document.getElementById('latitude-mango').value = position.coords.latitude;
+            document.getElementById('longitude-mango').value = position.coords.longitude;
+
+            document.getElementById('latitude-banana').value = position.coords.latitude;
+            document.getElementById('longitude-banana').value = position.coords.longitude;
+
+            document.getElementById('latitude-watermelon').value = position.coords.latitude;
+            document.getElementById('longitude-watermelon').value = position.coords.longitude;
+
+            document.getElementById('latitude-mixed berries').value = position.coords.latitude;
+            document.getElementById('longitude-mixed berries').value = position.coords.longitude;
+
+            document.getElementById('latitude-pineapple').value = position.coords.latitude;
+            document.getElementById('longitude-pineapple').value = position.coords.longitude;
+        }, function (error) {
+            alert('Unable to retrieve your location.');
+        });
+    } else {
+        alert("Geolocation is not supported by this browser.");
+    }
+
+    // Add event listeners to the order buttons
+    const orderButtons = document.querySelectorAll('.order-button');
+    orderButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const juiceType = this.getAttribute('data-juice');
+            submitOrder(juiceType);
+        });
+    });
+})
+
+// Function to submit order and show the checkout section
+function submitOrder(juiceType) {
+    // Collect selected juice details
+    const size = document.getElementById(`size-${juiceType}`).value;
+    const temperature = document.getElementById(`temperature-${juiceType}`).value;
+    const latitude = document.getElementById(`latitude-${juiceType}`).value;
+    const longitude = document.getElementById(`longitude-${juiceType}`).value;
+
+    // Populate checkout section with order details
+    document.getElementById('juice-type').value = juiceType;
+    document.getElementById('size').value = size;
+    document.getElementById('temperature').value = temperature;
+    document.getElementById('latitude').value = latitude;
+    document.getElementById('longitude').value = longitude;
+
+    // Display checkout section
+    document.getElementById('checkout').style.display = 'block'; // Show the checkout section
+}
+
+// map location for user
 document.addEventListener('DOMContentLoaded', function() {
     const map = L.map('map').setView([-1.286389, 36.817223], 13);
 
@@ -78,3 +130,4 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
