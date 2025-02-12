@@ -11,6 +11,11 @@
     <script src="https://www.paypal.com/sdk/js?client-id=YOUR_PAYPAL_CLIENT_ID"></script> <!-- PayPal SDK -->
 </head>
 <body>
+    <!-- Loading Spinner -->
+    <div id="loading-spinner" style="display: none;">
+        <div class="spinner"></div>
+    </div>
+
     <header>
         <!-- Adding the Logo -->
         <img src="logo.jpg" alt="FRESHDAILY Logo" id="logo">
@@ -246,7 +251,7 @@
         </div>
     </section>
 
-    <!--checkout-->
+    <!-- Checkout Section -->
     <section id="checkout" style="display:none;">
         <h2>Checkout</h2>
         <form id="checkout-form">
@@ -272,7 +277,25 @@
             <input type="tel" id="phone" name="phone" placeholder="Enter phone number" required><br>
     
             <button type="button" id="mpesaPayButton">Pay with MPesa</button>
+            <button id="back-to-menu" onclick="hideCheckout()">Back to Menu</button>
         </form>
+    </section>
+
+    <!-- Payment Confirmation Modal -->
+    <div id="payment-modal" style="display: none;">
+        <div class="modal-content">
+            <h2>Confirm Payment</h2>
+            <p>Are you sure you want to proceed with the payment?</p>
+            <button id="confirm-payment">Yes, Proceed</button>
+            <button id="cancel-payment">Cancel</button>
+        </div>
+    </div>
+
+    <!-- Thank You Section -->
+    <section id="thank-you" style="display: none;">
+        <h2>Thank You!</h2>
+        <p>Your order has been placed successfully. We'll deliver your juice shortly.</p>
+        <button onclick="location.reload()">Order Again</button>
     </section>
 
     <!-- Location Detection Section -->
@@ -280,8 +303,11 @@
         <h2>Your Location for Delivery</h2>
         <button id="get-location">Get My Location</button>
         <p id="location-status">Location will appear here.</p>
-        <div id="map" style="height: 400px;"></div> <!-- Placeholder for future map implementation if needed -->
+        <div id="map" style="height: 400px;"></div>
     </section>
+
+    <!-- Scroll to Top Button -->
+    <button id="scroll-to-top" onclick="scrollToTop()">↑</button>
 
     <footer>
         <h3>Contact Us</h3>
@@ -299,7 +325,6 @@
     <footer>
         <div class="footer-text">Developed by Brian Otieno @ 2024</div>
     </footer>
-      
 
     <script src="app.js"></script>
 </body>
